@@ -9,6 +9,11 @@ function App() {
 		setText(value);
 	}
 
+	function wordCount() {
+		const wordCount = text.split(" ").length;
+		console.log(wordCount);
+	}
+
 	return (
 		<div id="Game">
 			<header>
@@ -17,7 +22,7 @@ function App() {
 			<main>
 				<textarea value={text} onChange={handleChange} />
 				<h4>Time remaining:</h4>
-				<button>Start</button>
+				<button onClick={() => wordCount()}>Start</button>
 				<h1>Word count:</h1>
 			</main>
 		</div>
