@@ -9,7 +9,6 @@ function App() {
 		setText(value);
 	}
 
-	console.log(text);
 	return (
 		<div id="Game">
 			<header>
