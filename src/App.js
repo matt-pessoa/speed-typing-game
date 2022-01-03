@@ -3,6 +3,7 @@ import "./css/App.css";
 
 function App() {
 	const [text, setText] = useState("");
+	const [timer, setTimer] = useState(10);
 
 	function handleChange(event) {
 		const { value } = event.target;
@@ -23,7 +24,7 @@ function App() {
 			</header>
 			<main>
 				<textarea value={text} onChange={handleChange} />
-				<h4>Time remaining:</h4>
+				<h4>Time remaining: {timer}</h4>
 				<button onClick={() => wordCount()}>Start</button>
 				<h1>Word count:</h1>
 			</main>
