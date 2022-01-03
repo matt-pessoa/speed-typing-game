@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./css/App.css";
 
 function App() {
-	const { text, setText } = useState("");
+	const [text, setText] = useState("");
 
 	function handleChange(event) {
 		const { value } = event.target;
 		setText(value);
 	}
 
+	console.log(text);
 	return (
 		<div id="Game">
 			<header>
