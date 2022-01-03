@@ -10,8 +10,9 @@ function App() {
 	}
 
 	function wordCount() {
-		const wordCount = text.split(" ").length;
+		const wordCount = text.trim().split(" ").length;
 		console.log(wordCount);
+		return wordCount;
 	}
 
 	return (
