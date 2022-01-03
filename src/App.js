@@ -18,9 +18,11 @@ function App() {
 	}
 
 	useEffect(() => {
-		setTimeout(() => {
-			setTimeRemaining((time) => time - 1);
-		}, 1000);
+		if (timeRemaining > 0) {
+			setTimeout(() => {
+				setTimeRemaining((time) => time - 1);
+			}, 1000);
+		}
 	}, [timeRemaining]);
 
 	return (
