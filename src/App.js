@@ -10,9 +10,10 @@ function App() {
 	}
 
 	function wordCount() {
-		const wordCount = text.trim().split(" ").length;
-		console.log(wordCount);
-		return wordCount;
+		const wordsArray = text.split(" ");
+		const filteredWords = wordsArray.filter((word) => word !== "");
+		console.log(filteredWords.length);
+		return filteredWords.length;
 	}
 
 	return (
